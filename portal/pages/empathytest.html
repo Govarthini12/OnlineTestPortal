@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empathy Self-Assessment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #555;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+        }
+        .question {
+            margin-bottom: 15px;
+        }
+        .options {
+            display: flex;
+            gap: 10px;
+            margin-top: 5px;
+        }
+        .option {
+            background: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 10px;
+            cursor: pointer;
+            text-align: center;
+            flex: 1;
+        }
+        .option:hover {
+            background: #e0e0e0;
+        }
+        .selected {
+            background: #007bff;
+            color: white;
+            border: 1px solid #007bff;
+        }
+        input[type="radio"] {
+            display: none;
+        }
+        .option.selected {
+            background: #007bff;
+            color: white;
+        }
+        .option label {
+            display: block;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 4px;
+            text-align: center;
+        }
+        .option label:hover {
+            background: #e0e0e0;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Empathy Self-Assessment</h1>
+        <form id="empathyForm">
+            <div class="section">
+                <h2>Empathy Questions</h2>
+                <div class="question">
+                    <label for="empathy1_option1">1. I actively listen to others and try to understand their feelings.</label>
+                    <div class="options">
+                        <input type="radio" id="empathy1_option1" name="empathy1" value="1">
+                        <label for="empathy1_option1" class="option">1<br>Strongly Disagree</label>
+                        
+                        <input type="radio" id="empathy1_option2" name="empathy1" value="2">
+                        <label for="empathy1_option2" class="option">2<br>Disagree</label>
+                        
+                        <input type="radio" id="empathy1_option3" name="empathy1" value="3">
+                        <label for="empathy1_option3" class="option">3<br>Neutral</label>
+                        
+                        <input type="radio" id="empathy1_option4" name="empathy1" value="4">
+                        <label for="empathy1_option4" class="option">4<br>Agree</label>
+                        
+                        <input type="radio" id="empathy1_option5" name="empathy1" value="5">
+                        <label for="empathy1_option5" class="option">5<br>Strongly Agree</label>
+                    </div>
+                </div>
+                <div class="question">
+                    <label for="empathy2_option1">2. I can easily put myself in someone else’s shoes.</label>
+                    <div class="options">
+                        <input type="radio" id="empathy2_option1" name="empathy2" value="1">
+                        <label for="empathy2_option1" class="option">1<br>Strongly Disagree</label>
+                        
+                        <input type="radio" id="empathy2_option2" name="empathy2" value="2">
+                        <label for="empathy2_option2" class="option">2<br>Disagree</label>
+                        
+                        <input type="radio" id="empathy2_option3" name="empathy2" value="3">
+                        <label for="empathy2_option3" class="option">3<br>Neutral</label>
+                        
+                        <input type="radio" id="empathy2_option4" name="empathy2" value="4">
+                        <label for="empathy2_option4" class="option">4<br>Agree</label>
+                        
+                        <input type="radio" id="empathy2_option5" name="empathy2" value="5">
+                        <label for="empathy2_option5" class="option">5<br>Strongly Agree</label>
+                    </div>
+                </div>
+                <div class="question">
+                    <label for="empathy3_option1">3. I am sensitive to the moods and feelings of those around me.</label>
+                    <div class="options">
+                        <input type="radio" id="empathy3_option1" name="empathy3" value="1">
+                        <label for="empathy3_option1" class="option">1<br>Strongly Disagree</label>
+                        
+                        <input type="radio" id="empathy3_option2" name="empathy3" value="2">
+                        <label for="empathy3_option2" class="option">2<br>Disagree</label>
+                        
+                        <input type="radio" id="empathy3_option3" name="empathy3" value="3">
+                        <label for="empathy3_option3" class="option">3<br>Neutral</label>
+                        
+                        <input type="radio" id="empathy3_option4" name="empathy3" value="4">
+                        <label for="empathy3_option4" class="option">4<br>Agree</label>
+                        
+                        <input type="radio" id="empathy3_option5" name="empathy3" value="5">
+                        <label for="empathy3_option5" class="option">5<br>Strongly Agree</label>
+                    </div>
+                </div>
+                <div class="question">
+                    <label for="empathy4_option1">4. I offer support and help when I see someone in distress.</label>
+                    <div class="options">
+                        <input type="radio" id="empathy4_option1" name="empathy4" value="1">
+                        <label for="empathy4_option1" class="option">1<br>Strongly Disagree</label>
+                        
+                        <input type="radio" id="empathy4_option2" name="empathy4" value="2">
+                        <label for="empathy4_option2" class="option">2<br>Disagree</label>
+                        
+                        <input type="radio" id="empathy4_option3" name="empathy4" value="3">
+                        <label for="empathy4_option3" class="option">3<br>Neutral</label>
+                        
+                        <input type="radio" id="empathy4_option4" name="empathy4" value="4">
+                        <label for="empathy4_option4" class="option">4<br>Agree</label>
+                        
+                        <input type="radio" id="empathy4_option5" name="empathy4" value="5">
+                        <label for="empathy4_option5" class="option">5<br>Strongly Agree</label>
+                    </div>
+                </div>
+                <div class="question">
+                    <label for="empathy5_option1">5. I often think about how my actions affect others.</label>
+                    <div class="options">
+                        <input type="radio" id="empathy5_option1" name="empathy5" value="1">
+                        <label for="empathy5_option1" class="option">1<br>Strongly Disagree</label>
+                        
+                        <input type="radio" id="empathy5_option2" name="empathy5" value="2">
+                        <label for="empathy5_option2" class="option">2<br>Disagree</label>
+                        
+                        <input type="radio" id="empathy5_option3" name="empathy5" value="3">
+                        <label for="empathy5_option3" class="option">3<br>Neutral</label>
+                        
+                        <input type="radio" id="empathy5_option4" name="empathy5" value="4">
+                        <label for="empathy5_option4" class="option">4<br>Agree</label>
+                        
+                        <input type="radio" id="empathy5_option5" name="empathy5" value="5">
+                        <label for="empathy5_option5" class="option">5<br>Strongly Agree</label>
+                    </div>
+                </div>
+            </div>
+            <button type="submit">Next</button>
+        </form>
+    </div>
+    <script>
+        document.querySelectorAll('.option').forEach(option => {
+            option.addEventListener('click', function() {
+                const input = this.previousElementSibling;
+                input.checked = true;
+                const parent = this.parentNode;
+                parent.querySelectorAll('.option').forEach(opt => opt.classList.remove('selected'));
+                this.classList.add('selected');
+            });
+        });
+    </script>
+</body>
+</html>
